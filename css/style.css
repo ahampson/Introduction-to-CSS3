@@ -10,8 +10,8 @@ main {
 }
 
 img {
-  border-radius: 2%;
-  border-color: #000;
+  border-radius: 5%;
+  border-color: #F0A757;
   border-style: inset;
   background-color: #000;
   border-width: thick;
@@ -116,8 +116,13 @@ li {
 .box {
   padding: 5%;
   margin: 1%;
-  border: 1px inset black;
+  border: 4px inset #818284;
   border-radius: 10%;
+}
+
+.box:nth-child(odd) {
+  border: 4px outset #F0A757;
+  border-radius: 15%;
 }
  
 .red {
@@ -182,6 +187,10 @@ li {
   grid-template-columns: 45% 45%;
   justify-content: space-evenly;
   justify-items: center;
+}
+
+.grid-template {
+  grid-template-columns: 45% 45%;
 }
 
 .flex {
