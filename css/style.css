@@ -10,6 +10,11 @@ main {
 }
 
 img {
+  border-radius: 2%;
+  border-color: #000;
+  border-style: inset;
+  background-color: #000;
+  border-width: thick;
   width: 95%;
   padding:2.5%;
 }
@@ -89,6 +94,7 @@ nav a  {
   border-radius: 15px;
   font-size: large;
   align-content: center;
+  border: 1px solid white;
 }
 
 nav a:hover, nav a.active {
@@ -113,7 +119,7 @@ li {
   border: 1px inset black;
   border-radius: 10%;
 }
-
+ 
 .red {
   background-color: red;
 }
@@ -187,7 +193,18 @@ li {
   width: 50%
 }
 
-.rotate:hover {
+.rotate:hover:nth-child(odd) {
+  animation-name: rotate-ccw;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function:cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  position: relative;
+  border-color: #000;
+  border-width: 2px;
+  border-style: outset;
+}
+
+.rotate:hover:nth-child(even) {
   animation-name: rotate;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -198,4 +215,9 @@ li {
 @keyframes rotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-ccw {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
